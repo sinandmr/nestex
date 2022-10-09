@@ -8,7 +8,11 @@ import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [
-  ConfigModule.forRoot({isGlobal:true}),
+  ConfigModule.forRoot({
+    isGlobal:true, // tüm moduller içerisinde kullanılmasını sağlar.
+    // envFilePath: '.development.env',
+    // envFilePath: ['.env.development.local', '.env.development'],
+  }),
   AuthModule, 
   UserModule, 
   BookmarkModule, 

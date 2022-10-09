@@ -9,3 +9,13 @@ export class AuthDto{
     @IsNotEmpty()
     password: string
 }
+
+export class JWT {
+    @IsString()
+    @IsNotEmpty()
+    status: string   
+    
+    @IsString()
+    @IsNotEmpty()
+    access_token: string
+}
