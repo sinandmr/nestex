@@ -21,6 +21,6 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
       }
     })
     delete user.hash
-    return user // request objesinin içerisine req.user olarak kayıt olur.
+    return user // it register as req.user inside the request object.
   }
 }
